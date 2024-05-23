@@ -1,0 +1,155 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('./images/background.jpg') no-repeat center center fixed; /* Replace with your background image path */
+  background-size: cover;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.App-header {
+  background-color: rgba(52, 73, 94, 0.7); /* Transparent background color */
+  padding: 20px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.info-container img.icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.fetch-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.fetch-button:hover {
+  background-color: #2980b9;
+}
+
+.fetch-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.data-display p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ecf0f1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(184, 170, 170, 0.989);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
