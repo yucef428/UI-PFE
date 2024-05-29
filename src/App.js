@@ -1,10 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import ActiveInfo from './ActiveInfo';
-import PassiveInfo from './PassiveInfo';
+import DigitalNamePlate from './DigitalNamePlate';
+import TechnicalData from './TechnicalData';
 import homeIcon from './images/home-icon.png'; // Add your home icon image here
 import activeIcon from './images/active-icon.png'; // Add your active icon image here
 import passiveIcon from './images/passive-icon.png'; // Add your passive icon image here
+import GeneralInformation  from './GeneralInformation';
+import TechnicalProperties from './TechnicalProperties';
+import PhysicalAddress from './PhysicalAddress';
 import './App.css';
 
 const App = () => {
@@ -12,7 +15,7 @@ const App = () => {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>Robot Information App</h1>
+          <h1>LBR KUKA</h1>
           <nav>
             <ul>
               <li>
@@ -21,54 +24,37 @@ const App = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/active">
-                  <img src={activeIcon} alt="Active Info" className="nav-icon" /> Active Info
+                <Link to="/digital">
+                  <img src={activeIcon} alt="Active Info" className="nav-icon" /> DigitalNamePlate
                 </Link>
               </li>
               <li>
-                <Link to="/passive">
-                  <img src={passiveIcon} alt="Passive Info" className="nav-icon" /> Passive Info
+                <Link to="/datatech">
+                  <img src={passiveIcon} alt="Passive Info" className="nav-icon" /> Technical data
                 </Link>
               </li>
               {/* Add more buttons here */}
-              <li>
-                <Link to="/button1">
-                  Button 1
-                </Link>
-              </li>
-              <li>
-                <Link to="/button2">
-                  Button 2
-                </Link>
-              </li>
               {/* End of additional buttons */}
             </ul>
           </nav>
         </header>
         <main>
           <Routes>
-            <Route path="/active" element={<ActiveInfo />} />
-            <Route path="/passive" element={<PassiveInfo />} />
-            {/* Add routes for additional buttons here */}
-            <Route path="/button1" element={<PassiveInfo />} />
-            <Route path="/button2" element={<PassiveInfo />} />
+            <Route path="/digital" element={<DigitalNamePlate />} />
+            <Route path="/datatech" element={<TechnicalData />} />
+            <Route path="/general" element={<GeneralInformation />} />
+            <Route path="/technical" element={<TechnicalProperties />} />
+            <Route path="/physical" element={<PhysicalAddress />} />
             {/* End of additional routes */}
             <Route path="/" element={
               <div className="home-container">
                 <div className="card">
                   <img src={activeIcon} alt="Active Info" />
-                  <Link to="/active">Active Info</Link>
+                  <Link to="/digital">DigitalNamePlate</Link>
                 </div>
                 <div className="card">
                   <img src={passiveIcon} alt="Passive Info" />
-                  <Link to="/passive">Passive Info</Link>
-                </div>
-                {/* Add cards for additional buttons here */}
-                <div className="card">
-                  <Link to="/button1">ManufacturerProductDesignation</Link>
-                </div>
-                <div className="card">
-                  <Link to="/button2">Button 2</Link>
+                  <Link to="/datatech">Technical data</Link>
                 </div>
                 {/* End of additional cards */}
               </div>
