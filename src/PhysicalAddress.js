@@ -11,10 +11,10 @@ const PhysicalAddress = () => {
     setLoading(true);
     setError('');
     try {
-      const response1 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/DigitalNameplate/submodel/submodelElements/physicalAdress01/CountryCode/value'); // Replace with your API URL
-      const response2 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/DigitalNameplate/submodel/submodelElements/physicalAdress01/Street/value'); // Replace with your API URL
-      const response3 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/DigitalNameplate/submodel/submodelElements/physicalAdress01/Postalcode/value'); // Replace with your API URL
-      const response4 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/DigitalNameplate/submodel/submodelElements/physicalAdress01/City/value'); // Replace with your API URL
+      const response1 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/DigitalNameplate/submodel/submodelElements/physicalAdress01/CountryCode/value'); // Replace with your API URL
+      const response2 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/DigitalNameplate/submodel/submodelElements/physicalAdress01/Street/value'); // Replace with your API URL
+      const response3 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/DigitalNameplate/submodel/submodelElements/physicalAdress01/Postalcode/value'); // Replace with your API URL
+      const response4 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/DigitalNameplate/submodel/submodelElements/physicalAdress01/City/value'); // Replace with your API URL
       setData({
         data1: response1.data,
         data2: response2.data,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import activeIcon from './images/active-icon.png'; // Add your active icon image here
+import activeIcon from './images/passive-icon.jpg'; 
 
 const TechnicalProperties = () => {
   const [data, setData] = useState({ data1: '', data2: '', data3: '' , data4: '', data5: '', data6: '',  data7: '', data8: '',  data9: ''});
@@ -11,15 +11,15 @@ const TechnicalProperties = () => {
     setLoading(true);
     setError('');
     try {
-      const response1 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/number_of_axes/value'); // Replace with your API URL
-      const response2 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/number_of_controlled_axes/value'); // Replace with your API URL
-      const response3 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/volume_of_working_envelope/value'); // Replace with your API URL
-      const response4 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/Weight/value'); // Replace with your API URL
-      const response5 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/MaximumPayload/value'); // Replace with your API URL
-      const response6 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/rated_payload/value'); // Replace with your API URL
-      const response7 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/maximum_reach/value'); // Replace with your API URL
-      const response8 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/protection_rating/value'); // Replace with your API URL
-      const response9 = await axios.get('http://localhost:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/Protection_rating_in_Line_wrist/value'); // Replace with your API URL
+      const response1 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/number_of_axes/value'); // Replace with your API URL
+      const response2 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/number_of_controlled_axes/value'); // Replace with your API URL
+      const response3 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/volume_of_working_envelope/value'); // Replace with your API URL
+      const response4 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/Weight/value'); // Replace with your API URL
+      const response5 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/MaximumPayload/value'); // Replace with your API URL
+      const response6 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/rated_payload/value'); // Replace with your API URL
+      const response7 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/maximum_reach/value'); // Replace with your API URL
+      const response8 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/protection_rating/value'); // Replace with your API URL
+      const response9 = await axios.get('http://192.168.1.37:8081/aasServer/shells/AAS_LBR_iiwa_7_R800/aas/submodels/TechnicalData/submodel/submodelElements/TechnicalPropreties/Protection_rating_in_Line_wrist/value'); // Replace with your API URL
       setData({
         data1: response1.data,
         data2: response2.data,

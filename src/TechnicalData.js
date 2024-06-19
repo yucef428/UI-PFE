@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import passiveIcon from './images/passive-icon.png'; // Add your passive icon image here
+import passiveIcon from './images/passive-icon.jpg'; // Add your passive icon image here
 
 const TechnicalData = () => {
   const [loading, setLoading] = useState(false);

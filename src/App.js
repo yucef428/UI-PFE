@@ -2,12 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import DigitalNamePlate from './DigitalNamePlate';
 import TechnicalData from './TechnicalData';
-import homeIcon from './images/home-icon.png'; // Add your home icon image here
-import activeIcon from './images/active-icon.png'; // Add your active icon image here
-import passiveIcon from './images/passive-icon.png'; // Add your passive icon image here
-import GeneralInformation  from './GeneralInformation';
+import homeIcon from './images/home-icon.png';
+import activeIcon from './images/active-icon.png';
+import passiveIcon from './images/passive-icon.jpg';
+import GeneralInformation from './GeneralInformation';
 import TechnicalProperties from './TechnicalProperties';
 import PhysicalAddress from './PhysicalAddress';
+import ActivePosition from './ActivePosition';
+import JointPositions from './JointPositions';
+import JointTorques from './JointTorques';
+import cdtalogo from './images/cdtalogo.png';
+import usthb from './images/usthb.png';
+import robot from './images/robot.png';
 import './App.css';
 
 const App = () => {
@@ -15,17 +21,21 @@ const App = () => {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>LBR KUKA</h1>
+          <div className="header-logos">
+            <img src={usthb} alt="USTHB Logo" className="App-logo" />
+             <h1>LBR KUKA</h1>
+            <img src={cdtalogo} alt="CDTA Logo" className="App-logo" />
+           </div>
           <nav>
             <ul>
               <li>
                 <Link to="/">
-                  <img src={homeIcon} alt="Home" className="nav-icon" /> Home
+                  <img src={homeIcon} alt="Home" className="nav-icon" /> home
                 </Link>
               </li>
               <li>
                 <Link to="/digital">
-                  <img src={activeIcon} alt="Active Info" className="nav-icon" /> DigitalNamePlate
+                  <img src={activeIcon} alt="Active Info" className="nav-icon" /> Digital Name Plate
                 </Link>
               </li>
               <li>
@@ -33,8 +43,11 @@ const App = () => {
                   <img src={passiveIcon} alt="Passive Info" className="nav-icon" /> Technical data
                 </Link>
               </li>
-              {/* Add more buttons here */}
-              {/* End of additional buttons */}
+              <li>
+                <Link to="/activeposition">
+                  <img src={robot} alt="robot" className="nav-icon" /> live robot position
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
@@ -45,20 +58,28 @@ const App = () => {
             <Route path="/general" element={<GeneralInformation />} />
             <Route path="/technical" element={<TechnicalProperties />} />
             <Route path="/physical" element={<PhysicalAddress />} />
-            {/* End of additional routes */}
-            <Route path="/" element={
-              <div className="home-container">
-                <div className="card">
-                  <img src={activeIcon} alt="Active Info" />
-                  <Link to="/digital">DigitalNamePlate</Link>
+            <Route path="/activeposition" element={<ActivePosition />} />
+            <Route path="/JointPositions" element={<JointPositions />} />
+            <Route path="/Jointtorques" element={<JointTorques />} />
+            <Route
+              path="/"
+              element={
+                <div className="home-container">
+                  <div className="card">
+                    <img src={activeIcon} alt="Active Info" />
+                    <Link to="/digital">Digital Name Plate</Link>
+                  </div>
+                  <div className="card">
+                    <img src={passiveIcon} alt="robot" />
+                    <Link to="/datatech">Technical data</Link>
+                  </div>
+                  <div className="card">
+                    <img src={robot} alt="live robot position" />
+                    <Link to="/activeposition">live robot position</Link>
+                  </div>
                 </div>
-                <div className="card">
-                  <img src={passiveIcon} alt="Passive Info" />
-                  <Link to="/datatech">Technical data</Link>
-                </div>
-                {/* End of additional cards */}
-              </div>
-            } />
+              }
+            />
           </Routes>
         </main>
       </div>

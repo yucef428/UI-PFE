@@ -18,6 +18,9 @@ body {
 }
 
 .App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(52, 73, 94, 0.7); /* Transparent background color */
   padding: 20px;
   width: 100%;
@@ -26,9 +29,24 @@ body {
   border-radius: 8px;
 }
 
+.header-logos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.App-logo {
+  height: 100px;
+}
+
 .App-header h1 {
-  margin: 0;
-  font-size: 2em;
+  margin: 0px 0;
+  font-size: 2.5em;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav ul {
@@ -36,7 +54,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 0;
 }
 
 nav li {
@@ -105,10 +123,34 @@ main {
   cursor: not-allowed;
 }
 
-.data-display p {
-  margin: 10px 0;
-  font-size: 1.1em;
+.data-display {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust as needed for spacing between columns */
 }
+
+.data-column {
+  list-style-type: none;
+  padding: 0;
+}
+
+.data-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.data-column ul li {
+  margin-bottom: 10px; /* Adjust as needed for spacing between list items */
+}
+
+.data-column h3 {
+  text-align: center;
+}
+
+.data-column p {
+  text-align: left; /* Adjust as needed, could be center as well */
+}
+
 
 .error {
   color: red;
@@ -119,6 +161,12 @@ main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.postition-container {
+  display: flex ;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
 }
 
 .card {
@@ -153,3 +201,63 @@ main {
 .card a:hover {
   text-decoration: underline;
 }
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.info-container img.icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.fetch-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.fetch-button:hover {
+  background-color: #2980b9;
+}
+
+.fetch-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.data-display {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Changed to column for row display */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.data-display p {
+  margin: 10px 0;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.data-display img {
+  margin: 10px 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
